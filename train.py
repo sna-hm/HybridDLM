@@ -76,7 +76,7 @@ def predict_classes(model, x):
 # data load
 legitimate_train = pd.read_csv('features/legitimate_train.csv')
 legitimate_test = pd.read_csv('features/legitimate_test.csv')
-phish_train = pd.read_csv('features/phish_train_w2v.csv')
+phish_train = pd.read_csv('features/phish_train.csv')
 phish_test = pd.read_csv('features/phish_test.csv')
 
 train = create_scaler(pd.concat([legitimate_train, phish_train], axis=0)).sample(frac=1).reset_index(drop=True)
